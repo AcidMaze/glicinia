@@ -1,0 +1,812 @@
+.blockEditImage{
+    display: flex;    
+}
+/* 
+.blockEditImage img {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 0;
+} */
+
+.blockEditImage span {
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    z-index: 3;
+    background: url("img/deleteImg.svg");
+    transition: all 0.3s linear;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.blockEditImage span:hover{
+    transition: all 0.2s linear;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+
+.selectImg{
+    opacity: 1;
+}
+.selectImg:hover{
+    opacity: 0.8;
+}
+
+.container-room{
+    transition: all 0.4s linear;
+    -webkit-transform: translate3d(0,6px,0);
+    transform: translate3d(0,6px,0);
+    outline:none;
+    margin-bottom: 1rem;
+}
+
+.container-room:hover{
+    transition: all 0.25s linear;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.block-room{
+    position: relative;
+    margin: 0 auto;
+    width: 22rem;
+    height: 33.6rem;
+    box-sizing: border-box;
+    background-color: rgb(242,242,246);
+}
+
+.block-info{
+    position:relative;
+    text-align: left;
+    margin: 0.3em 0.9em;
+    display:block;
+    color:black;
+}
+
+.block-service{
+    color: white;
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom-right-radius: 6px;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255,0,0,0) 0%,rgba(0, 0, 0, 0.75) 100%);
+}
+
+
+.block-person_info{
+    position:relative;
+    background: rgba(255, 255, 255);
+    width: 9.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.44rem;
+    text-align: center;
+    border-radius: 40px;
+}
+.block-info-btn{
+    position:relative;
+    padding-left: 25px;
+}
+
+.block-roomimg{
+    margin: 0 auto;
+}
+
+.container-revroom{
+    outline:none;
+}
+
+.container-revimg{
+    position: relative;
+    margin: 0 auto;
+    border-radius: 6px;
+    width: 65em;
+    height: 35.2em;
+    display: block;
+    background-color: white;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+}
+
+.block-revroomimg{
+    position: relative;
+    display: block;
+    line-height: 0;
+    float: right;
+    width: 49%;
+    height: 100%;
+    z-index: 5;
+}
+
+
+
+.block-revinput{
+    position:relative;
+    display: block;
+    line-height: 0;
+}
+
+
+.block-revroomimg span {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 7px;
+    top: 7px;
+    z-index: 3;
+    background: url("img/cancel.svg");
+    transition: all 0.4s linear;
+    transform: scale(1);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.block-revroomimg span:hover{
+    filter: invert(100%);
+    transition: all 0.3s linear;
+	transform: scale(0.8);
+}
+
+
+.fond{
+    position:relative;
+    margin-top:3rem;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    background-color:rgba(55, 55, 55, 0.05);
+    line-height: 0; /* чтобы не было пробела под картинкой */
+}
+
+.reviews-container {
+	filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
+	background: #ffffff;
+	position: relative;
+    overflow: hidden;
+    outline:none;
+	width: 100%;
+    border-radius: 0;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.container-news{
+    margin-bottom: 0.5rem;
+    outline:none;
+}
+.block-news {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 1118px;
+}
+
+.block-news > img{
+    width: 100%;
+    height: 498px;
+    object-fit: cover;
+    filter: brightness(76%);
+    transition: transform .5s ease-in-out;
+}
+
+.block-text-3{
+    position:absolute;
+    display:block;
+    width: 51%;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-button-3{
+    position:absolute;
+    display: block;
+    z-index: 3;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.stDots{
+    display: -webkit-box;
+    -webkit-line-clamp: 10; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.arrow {
+    position: absolute;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.arrow svg {
+    transition: color 250ms;
+}
+.circle-btn{
+    position: absolute;
+    border-radius: 100%;
+    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
+    background: rgb(255, 255, 255);
+    max-width: 100%;
+    max-height: 45px;
+    transition: all 0.45s linear;
+}
+.circle-btn:hover{
+    transform: scale(1);
+}
+
+.arrow svg:hover {
+    color: #df8eff;
+}
+
+.next {
+    left: 1.5%;
+    top: 41%;
+}
+
+.prev {
+    right: 1.5%;
+    top: 41%;
+}
+
+
+.next2 {
+    left: 8%;
+    top: 44%;
+}
+.prev2 {
+    right: 8%;
+    top: 44%;
+}
+
+.next3 {
+    left: 1.5%;
+    color:white;
+    top: 43.5%;
+}
+.prev3 {
+    right: 1.5%;
+    color:white;
+    top: 43.5%;
+}
+
+.next4 {
+    left: 1.5%;
+    top: 47%;
+}
+
+.prev4 {
+    right: 1.5%;
+    top: 47%;
+}
+
+.link-decor {
+	position: relative;
+    font-size: 17px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+	color: white;
+	cursor: pointer;
+	line-height: 1.5; /*задаём высоту строки*/
+	text-decoration: none; /*убираем подчёркивание*/
+}
+
+.link-decor:after {
+    content: "";
+	display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: white; /*задаём цвет линии*/
+	transition: width 0.35s ease-out; /*задаём время анимации*/
+}
+
+.link-decor:hover:after,
+.link-decor:focus:after {
+    width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+.link-decor2 {
+	position: relative;
+    font-size: 14px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+	color: black;
+	cursor: pointer;
+	line-height: 1.5; /*задаём высоту строки*/
+	text-decoration: none; /*убираем подчёркивание*/
+
+}
+.link-decor2:after {
+    content: "";
+	display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: black;
+	transition: width 0.4s ease-out; /*задаём время анимации*/
+}
+
+.link-decor2:hover:after,
+.link-decor2:focus:after {
+    width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+.link-decor3 {
+	position: relative;
+    font-size: 17px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+	color: rgb(69, 123, 131);
+	cursor: pointer;
+	line-height: 1.5; /*задаём высоту строки*/
+	text-decoration: none; /*убираем подчёркивание*/
+
+}
+.link-decor3:after {
+    content: "";
+	display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #527c82ff;
+	transition: width 0.4s ease-out; /*задаём время анимации*/
+}
+
+.link-decor3:hover:after,
+.link-decor3:focus:after {
+    width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+.iconSt{
+    color: white;
+}
+
+.iconSt:hover{
+    color:rgba(255, 255, 255, 0.7);
+}
+
+.iconSt2{
+    color: black;
+}
+
+.iconSt2:hover{
+    color:rgba(0, 0, 0, 0.7);
+}
+
+.flexboxes {
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row-reverse;
+    overflow: visible;
+}
+
+.flexboxes > img {padding-bottom:4px; filter: brightness(90%); margin: 0 auto;}
+.block0 {
+    width: 99.7%;
+    height: 457px;
+    object-fit: cover;
+    transition: transform .5s ease-in-out;
+}
+.block1 {
+    width: 35%;
+    height: 361px;
+    object-fit: cover;
+    transition: transform .5s ease-in-out;
+}
+.block2 {
+    width: 64.3%;
+    height: 361px;
+    object-fit: cover;
+    transition: transform .5s ease-in-out;
+}
+.block3 {
+    width: 35%;
+    height: 337px;
+    object-fit: cover;
+    transition: transform .5s ease-in-out;
+}
+.block4 {
+    width: 28.95%;
+    height: 337px;
+    object-fit: cover;
+    transition: transform .5s ease-in-out;
+}
+.block5 {
+    width: 35%;
+    height: 337px;
+    object-fit: cover;
+    transition: transform .5s ease-in-out;
+}
+
+.block6 {
+    width: 25%;
+    height: 367px;
+    object-fit: cover;
+    transition: transform .5s ease-in-out;
+}
+.block7 {
+    width: 49.1%;
+    height: 367px;
+    object-fit: cover;
+    transition: transform .5s ease-in-out;
+}
+.block8 {
+    width: 25%;
+    height: 367px;
+    object-fit: cover;
+    transition: transform .5s ease-in-out;
+}
+
+.block-text-1{
+    z-index: 5;
+    position:absolute;
+    width: 100%;
+    padding-top: 105px;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    word-spacing: 1px;
+}
+
+.block-text-2{
+    z-index: 5;
+    position:absolute;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-person_info-2{
+    z-index: 5;
+    position:absolute;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background: rgba(255, 255, 255);
+    width: 9.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.44rem;
+    border-radius: 40px;
+}
+
+.block-button-2{
+    z-index: 5;
+    position:absolute;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.block-button-1{
+    z-index: 5;
+    position:absolute;
+    width: 100%;
+    padding-top: 211px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    color:white;
+    word-spacing: 1px;
+}
+
+.block-info-1{
+    position:relative;
+    width: 100%;
+    padding-top: 0.2%;
+    text-align: left;
+    color:black;
+    word-spacing: 1px;
+}
+
+.block-seacrh-room{
+    position:absolute;
+    z-index: 2;
+    display: inline-block;
+    text-align: left;
+    border: 2px white solid;
+    width: 260px;
+    border-radius: 40px;
+}
+
+.container-glicinia{
+    width: 100%;
+    position: relative;
+    
+    outline: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.container-info-glicinia{
+    width: 100%;
+    position: relative;
+    outline: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-info-glicinia > img{
+    padding-bottom:0.3em; 
+    width: 100%;
+    height: 362px;
+    object-fit: cover;
+    transition: transform .5s ease-in-out;
+    filter: brightness(76%);
+}
+
+.container-glicinia > img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform .5s ease-in-out;
+}
+
+@media only screen and (max-width: 319px)  {
+    .flexboxes > img {
+        padding-bottom:2px; 
+        padding-left:1px; 
+        padding-right:1px;
+        width: 100%;
+        height: 100%;
+    }
+    .container-glicinia > img{
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+    }
+    
+}
+
+/* IPhone4-5 */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5) and (max-width: 320px) {
+    .block-room{
+        width: 19.2rem;
+        height: 31.2rem;
+    }
+    .block-person_info{
+        width: 9rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.44rem;
+    }
+    
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .flexboxes > img {padding-bottom:1px; padding-left:0.25px; padding-right:0.25px; filter: brightness(90%); margin: 0 auto;}
+    .container-glicinia > img{
+        width: 100%;
+        height: 463px;
+        object-fit: cover;
+    }
+    .block-news > img{
+        width: 100%;
+        height: 443px;
+        object-fit: cover;
+    }
+    .block0 {
+        width: 99.7%;
+        height: 270px;
+        object-fit: cover;
+    }
+    .block1 {
+        width: 49.5%;
+        height: 245px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+    .block2 {
+        width: 49.5%;
+        height: 245px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+
+    .block3 {
+        width: 32.572%;
+        height: 220px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+    .block4 {
+        width: 33%;
+        height: 220px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+    .block5 {
+        width: 32.562%;
+        height: 220px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+
+    .block6 {
+        width: 99.7%;
+        height: 277px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+    .block7 {
+        width: 49.5%;
+        height: 240px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+    .block8 {
+        width: 49.5%;
+        height: 240px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+    .link-decor{
+        font-size: 15px;
+    }
+    .block-text-1{
+        padding-top: 110px;
+    }
+    .block-button-1{
+        padding-top: 180px;
+    }
+    .block-info-1{
+        width: 97%;
+        max-height: 205px;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px){
+    .flexboxes > img {padding-bottom:2px; padding-left:0.5px; padding-right:0.5px; filter: brightness(90%); margin: 0 auto;}
+    .container-glicinia > img{
+        width: 100%;
+        height: 475px;
+        object-fit: cover;
+    }
+    .block-news > img{
+        width: 100%;
+        height: 478px;
+        object-fit: cover;
+    }
+    .block0 {
+        width: 99.6%;
+        height: 400px;
+        object-fit: cover;
+    }
+    .block1 {
+        width: 38.2%;
+        height: 361px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+    .block2 {
+        width: 61.2%;
+        height: 361px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+
+    .block3 {
+        width: 38.2%;
+        height: 327px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+    
+    .block4 {
+        width: 32.76%;
+        height: 327px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+    .block5 {
+        width: 27.96%;
+        height: 327px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+
+    .block6 {
+        width: 25%;
+        height: 367px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+    .block7 {
+        width: 49%;
+        height: 367px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+    .block8 {
+        width: 25%;
+        height: 367px;
+        object-fit: cover;
+        transition: transform .5s ease-in-out;
+    }
+}
+
+
+.clearfix:before, .clearfix:after { 
+	content: ''; 
+	display: table; 
+}
+.clearfix:after { 
+	clear: both; 
+}
+.hover-text-one {
+	overflow: hidden;
+	margin: 0;
+	width: 100%;
+	list-style: none;
+	text-align: center;
+}
+.hover-text-one figure {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	overflow: hidden;
+	background: #527c82;
+	text-align: center;
+	cursor: pointer;
+}
+.hover-text-one figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	opacity: 0.8;
+}
+.hover-text-one figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.hover-text-one figure figcaption::before,
+.hover-text-one figure figcaption::after {
+	pointer-events: none;
+}
+.hover-text-one figure figcaption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.hover-text-one figure h3 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+.hover-text-one figure h3 span {
+	font-weight: 800;
+}
+.hover-text-one figure h3,
+.hover-text-one figure p {
+	margin: 0;
+}
+.hover-text-one figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
